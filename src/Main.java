@@ -34,14 +34,19 @@ public class Main {
         testAnimal(dog);
         testAnimal(turtle);
         testAnimal(enteredName);
+        ambulation(userAnimal, animalFlys, food, sound);
 
 
+    }
+    public static void ambulation(String userAnimal, String animalFlys, String food, String sound){
+        Scanner sc2 = new Scanner(System.in);
         System.out.print("Do you wish to change your animal Ambulation? (answer with 'yes' or 'no' )");
-        String choice = sc.nextLine();
+        String choice = sc2.nextLine();
 
-        if(choice == "yes"){
+        if(choice.equals("yes")){
+            System.out.println(choice);
             System.out.print("Enter from these options the number of legs it has: '2' or '4' or 'no legs :");
-            int newLegs = sc.nextInt();
+            int newLegs = sc2.nextInt();
             Animal modifiedAnimal = new InpAnimal(userAnimal, newLegs, animalFlys, food, sound);
             testAnimal(modifiedAnimal);
         }else{
